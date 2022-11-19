@@ -12,19 +12,83 @@
             background-color: black;
             color: white;
         }
+        nav, a
+        {
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .boton
+        {
+            background-color: blue;
+            border-radius: 5px;
+        }
+        .form
+        {
+            border: solid white;
+            text-align: center;
+        }
+        input:hover
+        {
+            border:2px solid rgb(93, 2, 2);
+        }
+        input:focus
+        {
+            border:2px solid white ;
+        }
+        input::placeholder
+        {
+            font-size: 15px;
+        }
+        label
+        {
+            font-weight: 800;
+            font-size: 2em;
+        }
+        input
+        {
+            border: 2px solid gray;
+            width: 400px;
+            height: 25px;
+            border-radius: 5px;
+            border-style: solid;
+            outline: none;
+            transition: border 0.3s ease-out;
+        }
+        #textarea
+    {
+        resize: none;
+            transition: border 0.3s ease-out;
+        margin: 30px;
+        width: 600px;
+        border-radius: 5px;
+    }
+    #textarea:hover
+    {
+        cursor: pointer;
+        border: 1px solid rgb(93, 2, 2);
+    }
+    .button
+    {
+        margin-left: 200px;
+    }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Get back</a>
+            <a href="index.html" class="boton">Get back</a>
         </nav>
     </header>
-    <form action="" method="get">
-        <label for="Name">Enter Your Name</label><br>
-        <input type="text" name="Name" id="Name" required placeholder="Here"><br>
+    <form action="" method="get" class="form">
+        <label class="name" for="Name">Enter Your Name</label><br>
+        <input  type="text" name="Name" id="Name" required placeholder="Here"><br>
         <label for="Email">Your Email</label><br>
-        <input type="email" name="" id="">
+        <input  type="email" name="Email" id="Email" placeholder="abc123@outlook.com" ><br>
+        <textarea placeholder="Message Here!"  name="textarea" id="textarea" cols="30" rows="10"></textarea><br>
+        <input class="button" type="button" value="Send">
     </form>
 </body>
 </html>
